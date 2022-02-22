@@ -1,8 +1,17 @@
+import Banner from "../components/Banner";
+import TestimonialBadge from "../images/testimonial-badge.svg";
+import Scribble from "../images/scribble.svg";
+import Table from "../components/Table";
+
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
-      <p>This is the Home page</p>
+      <Banner
+        title="Testimonials I've left"
+        higherIcon={TestimonialBadge}
+        lowerIcon={Scribble}
+      />
+      <Table />
     </div>
   );
 };
