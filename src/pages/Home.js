@@ -2,8 +2,16 @@ import Banner from "../components/Banner";
 import TestimonialBadge from "../images/testimonial-badge.svg";
 import Scribble from "../images/scribble.svg";
 import Table from "../components/Table";
+import service from "../services";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [tracks, setTracks] = useState([]);
+  useEffect(() => {
+    service.getTracks().then((response) => {
+      setTracks(response);
+    });
+  }, []);
   return (
     <div>
       <Banner
@@ -11,7 +19,7 @@ const Home = () => {
         higherIcon={TestimonialBadge}
         lowerIcon={Scribble}
       />
-      <Table />
+      <Table tracks={tracks} />
     </div>
   );
 };
