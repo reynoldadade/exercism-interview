@@ -1,5 +1,6 @@
 import SearchInput from "./SearchInput";
 import TrackSelect from "./TrackSelect";
+import SortSelector from "./SortSelector";
 const Table = ({ tracks }) => {
   return (
     <div className="mx-12 mt-12 mb-[42px] border-2 h-[791px] rounded-[8px]">
@@ -8,7 +9,8 @@ const Table = ({ tracks }) => {
           {tracks.tracks ? <TrackSelect tracks={tracks} /> : null}
           <SearchInput />
         </div>
-        <div>right</div>
+
+        <SortSelector />
       </div>
     </div>
   );

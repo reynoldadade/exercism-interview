@@ -1,6 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useState, useEffect } from "react";
 import ListBadge from "../images/list-badge.svg";
+import DropDown from "../images/dropdown.svg";
 const TrackSelect = ({ tracks }) => {
   //store tracks in state
   const [trackList, setTrackList] = useState([]);
@@ -21,8 +22,9 @@ const TrackSelect = ({ tracks }) => {
 
   return (
     <Menu className="relative ml-[26.18px]" as="div">
-      <Menu.Button className="inline-flex justify-center">
+      <Menu.Button className="inline-flex justify-center items-center">
         <img src={ListBadge} alt="track selection" />
+        <img src={DropDown} alt="track selection" className="ml-[14.63px]" />
       </Menu.Button>
       <Transition
         as={Fragment}

@@ -7,6 +7,7 @@ module.exports = {
         "light-default": "hsla(249, 72%, 15%, 1)",
         "light-secondary": "hsla(248, 24%, 43%, 1)",
         "dark-default": "rgba(240, 243, 249, 1)",
+        "input-border": "#2E57E8",
       },
       spacing: {
         2.25: "2.25rem",
