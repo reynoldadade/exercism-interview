@@ -6,12 +6,13 @@ import service from "../services";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [tracks, setTracks] = useState([]);
+  const [tracks, setTracks] = useState({});
   useEffect(() => {
     service.getTracks().then((response) => {
       setTracks(response);
     });
   }, []);
+
   return (
     <div>
       <Banner

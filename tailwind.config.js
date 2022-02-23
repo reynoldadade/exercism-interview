@@ -6,6 +6,7 @@ module.exports = {
         background: "hsla(220, 69%, 97%, 1)",
         "light-default": "hsla(249, 72%, 15%, 1)",
         "light-secondary": "hsla(248, 24%, 43%, 1)",
+        "dark-default": "rgba(240, 243, 249, 1)",
       },
       spacing: {
         2.25: "2.25rem",

@@ -57,8 +57,8 @@ const Header = (props) => {
           <img src={Badge} alt="badge icon" className="mr-2" />
           <span>300k</span>
         </div>
-        <div className="rounded-full mr-[22.24px]">
-          <img src={Erik} alt="profile" />
+        <div className=" mr-[22.24px]">
+          <img src={Erik} alt="profile" className="rounded-full" />
         </div>
         <div className="mr-[30.25px]">
           <img src={NavMenuV} alt="profile" />
