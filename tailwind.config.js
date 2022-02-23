@@ -14,7 +14,11 @@ module.exports = {
         c97: "6.063rem",
         c31: "1.938rem",
       },
+      fontSize: {
+        small: "14px",
+        medium: "15px",
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 };

@@ -6,7 +6,7 @@ const TableRow = ({ testimonials }) => {
       {testimonials.map((testimonial) => (
         <div
           className="flex justify-between items-center h-[64px] hover:bg-background border-b"
-          key={testimonials.id}
+          key={testimonial.id}
         >
           <div className="inline-flex w-1/3 items-center">
             <div className="mx-[25.67px]">
