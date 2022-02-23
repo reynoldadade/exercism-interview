@@ -30,7 +30,7 @@ export default function SortSelector() {
           <div className="px-1 py-1 ">
             {/*loop through sortFormat array and create a menu item for each*/}
             {sortFormat.map((sort) => (
-              <Menu.Item key={sort.slug}>
+              <Menu.Item key={sort.name}>
                 <button>{sort.name}</button>
               </Menu.Item>
             ))}

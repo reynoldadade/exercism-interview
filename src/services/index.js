@@ -16,4 +16,12 @@ export default {
       console.log(error);
     }
   },
+  async getTestimonials(params) {
+    try {
+      const response = await instance.get("hiring/testimonials", { params });
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

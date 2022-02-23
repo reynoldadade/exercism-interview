@@ -20,7 +20,7 @@ const Header = (props) => {
     { name: "Contribute", link: "/contribute", src: Legos },
   ];
   return (
-    <div className="w-full h-16 bg-background flex items-center border-b-2 justify-between">
+    <div className="w-full h-16 bg-white flex items-center border-b-2 justify-between">
       <div className="text-light-secondary flex items-center">
         <div className="ml-[33.12px] mr-[36.48px]">
           <img src={Logo} alt="profile" />
