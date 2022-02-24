@@ -12,7 +12,11 @@ const Table = ({ tracks }) => {
     getTestimonials();
   }, []);
 
-  function getTestimonials(params = {}) {
+  function getTestimonials(
+    params = {
+      //TODO: add default params
+    }
+  ) {
     services.getTestimonials(params).then((response) => {
       setTestimonials(response.testimonials.results);
       setPagination(response.testimonials.pagination);
@@ -29,7 +33,7 @@ const Table = ({ tracks }) => {
         <SortSelector />
       </div>
       <TableContent testimonials={testimonials} pageData={pagination} />
-      <Pagination pageData={pagination} />
+      <Pagination paginationData={pagination} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import NextIcon from "../images/NextIcon.svg";
 import PreviousIcon from "../images/PreviousIcon.svg";
 import Paginator from "./PageNumbers";
-export default function Pagination(props) {
+export default function Pagination({ paginationData }) {
   return (
     <div className="w-full h-[71px]">
       <div className="flex justify-between items-center h-[71px]">
@@ -12,8 +12,8 @@ export default function Pagination(props) {
           </button>
         </div>
         <div>
-          {Object.keys(props.pageData).length > 0 && (
-            <Paginator pageData={props.pageData} />
+          {Object.keys(paginationData).length > 0 && (
+            <Paginator paginationData={paginationData} />
           )}
         </div>
         <div className="mr-[32px]">

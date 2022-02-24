@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
+import PageButton from "./PageButton";
 
-export default function Paginator({
-  currentPage,
-  total_pages,
-  total_count,
-  onPageChange,
-}) {
-  const [pageData, setPageData] = useState({});
+export default function Paginator({ paginationData }) {
+  const [currentPages, setCurrentPages] = useState([]);
   useEffect(() => {
-    setPageData(computePages(currentPage, total_pages));
-  }, [currentPage, total_pages]);
+    setCurrentPages(
+      // computePages(paginationData.current_page, paginationData.total_pages)
+      computePages(5, 300)
+    );
+  }, [paginationData.current_page, paginationData.total_pages]);
+  // console.log("current pages", currentPages);
+  // console.log
 
   function computePages(currentPage, total_pages) {
+    console.log(currentPage, total_pages);
     let pages = [];
     let start = currentPage - 2;
     let end = currentPage + 2;
@@ -26,16 +28,13 @@ export default function Paginator({
     for (let i = start; i <= end; i++) {
       pages.push(i);
     }
+    return pages;
   }
 
   return (
     <div className="flex">
-      {pageData.map((page) => {
-        return (
-          <div className="rounded border text-light-default py-[8px] px-[16px]">
-            {page}
-          </div>
-        );
+      {currentPages.map((page) => {
+        return <PageButton page={page} />;
       })}
     </div>
   );
